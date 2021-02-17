@@ -36,7 +36,7 @@
       @foreach($branchs as $branch)  
       <tr>
       <td>{{$branch->address}}</td>
-      <td>ت/ {{$branch->phone}}</td>
+      <td><span>ت/</span> {{$branch->phone}}</td>
       
       </tr>
         @endforeach
