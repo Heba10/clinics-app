@@ -21,16 +21,15 @@ class ClinicController extends Controller
     public function show()
     {
         $branchs = Branch::all();
-        //first 
-       //take the id from url param
+       
        $request = request();
        $clinicId = $request->clinic;
-        //sec
-       //query to retrieve the clinic by id
+       
        $clinic = Clinic::find($clinicId);
-      
-        //theard
-        //key->value 
+       
+       $branchs= Branch::where('clinic_id',$clinicId)->get();
+       //dd($branchs);
+        
        //send the value to the view
        return view('clinics.show',[
            'clinic' => $clinic,

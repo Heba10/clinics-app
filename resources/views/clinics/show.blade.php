@@ -28,6 +28,7 @@
     
         @foreach($branchs as $branch)  
           <option value="{{$branch->id}}">{{$branch->phone}}</option>
+          <option value="{{$branch->id}}">{{$branch->address}}</option>
         @endforeach
        
     </div>

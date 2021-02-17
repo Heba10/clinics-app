@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Branch extends Model
 {
-    //
+    public function clinic()
+    {
+      return $this->belongsTo('App\Clinic');
+
+    }
+
 }
