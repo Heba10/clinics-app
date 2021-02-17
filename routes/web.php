@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/','ClinicController@index' )->name('clinics.index');
+Route::get('/{clinic}', 'ClinicController@show')->name('clinics.show');
